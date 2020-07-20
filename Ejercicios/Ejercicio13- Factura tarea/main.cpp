@@ -1,0 +1,42 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+	double subtotal = 0 ;
+    double total = 0 ;
+    double impuesto = 0.15 ;
+    int descuento = 0;
+    double CalculoDescuento = 0;
+    double CalculoImpuesto = 0;
+    char estaExenta;
+
+    cout << " Ingrese el subtotal de la factura: " ;
+    cin >> subtotal;
+    
+    cout << "Ingrese el descuento (0, 10, 15, 20) ";
+    cin >> descuento;
+
+    cout << "Es factura excenta? escriba S o N:";
+    cin >> estaExenta;
+
+    // Proceso
+    if (estaExenta == 'S' || estaExenta == 's'){
+        CalculoDescuento = (subtotal * descuento) / 100;
+        total = subtotal - CalculoDescuento;
+    } else {
+        if (estaExenta == 'N' || estaExenta == 'n'){
+            CalculoDescuento = (subtotal * descuento) / 100;
+	        CalculoImpuesto =  (subtotal -  CalculoDescuento) * 0.15;
+            total = subtotal - CalculoDescuento + CalculoImpuesto;
+        }
+    }
+       
+    // Salida
+	cout << endl;
+    cout << " Total a pagar es: " << total;
+	return 0;
+}
