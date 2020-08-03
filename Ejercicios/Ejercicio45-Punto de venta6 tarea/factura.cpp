@@ -3,12 +3,17 @@
 using namespace std;
 
 double subtotal;
+double impuesto;
+double total;
+
 string listaProductos;
 
 void agregarProducto(string descripcion, int cantidad, double precio)
 {
     listaProductos = listaProductos + descripcion + '\n';
     subtotal = subtotal + (cantidad *precio);
+    impuesto = (subtotal * 0.15);
+    total = (subtotal + impuesto);
 }
 
 void imprimirFactura()
@@ -25,8 +30,9 @@ void imprimirFactura()
     cout << listaProductos;
     
     cout << endl;
-    cout << "subtotal: " << subtotal;
+    cout << "Subtotal : " << subtotal;
     cout << endl;
+    cout << "El total a pagar es: " << total;
     cout << endl;
     system("pause");
 
