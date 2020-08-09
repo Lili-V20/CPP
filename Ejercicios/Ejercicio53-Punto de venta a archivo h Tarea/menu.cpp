@@ -1,9 +1,10 @@
 #include <iostream>
 
-
 using namespace std;
+
 extern void productos(int opcion);
 extern void imprimirFactura();
+
 void menu()
 {
 
