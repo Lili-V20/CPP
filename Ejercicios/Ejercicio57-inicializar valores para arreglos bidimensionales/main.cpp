@@ -4,24 +4,25 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    string nombres[3] [2] =
+    int filas = 3;
+    int columnas = 2;
+
+    string nombres[filas][columnas] =
     {
         {"Juan", "Perez"},
         {"Maria", "Martinez"},
-        {"Pedro", "Jimenez"},
+        {"Pedro", "Jimenez"}
     };
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < filas; i++)
     {
-    for (int j = 0; j < 2; j++)
+        for (int j = 0; j < columnas; j++)
         {
             cout << nombres[i][j] << " ";
         }
         
         cout << endl;
     }
-    
-
 
     return 0;
 }
