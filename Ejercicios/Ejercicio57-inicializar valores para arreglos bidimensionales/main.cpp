@@ -14,12 +14,6 @@ int main(int argc, char const *argv[])
 
     nombres[2][0] = "Pedro";
     nombres[2][1] = "Jimenez";
-    string nombres[3][2] = 
-    {
-        {"Juan", "Perez"},
-        {"Maria", "Martinez"},
-        {"Pedro", "Jimenez"},
-    };
 
     for (int i = 0; i < 3; i++)
     {
